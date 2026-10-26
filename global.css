@@ -1,0 +1,177 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM & DESIGN TOKENS
+   Website: Job Fair
+   Theme: Modern Indigo & Slate (Catchy, high contrast, yet soft on the eyes)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Typography Imports
+   - Plus Jakarta Sans: Modern geometric, warm, highly legible at all sizes
+   - Inter: Renowned for exceptional screen legibility and neutral clarity
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  /* ------------------------------------------------------------------------
+     2. Color Palette
+     Designed to be catchy, vibrant, yet gentle and low-fatigue for the eyes.
+     - Primary: Soft Royal Indigo (approachable, professional, eye-friendly)
+     - Accent: Gentle Sky / Cyan (catchy highlight without glare)
+     - Surfaces: Calming Off-Whites & Slates (avoids harsh 100% white glare)
+     ------------------------------------------------------------------------ */
+
+  /* Primary Brand (Soft Royal Indigo) */
+  --primary-50:  #eef2ff;
+  --primary-100: #e0e7ff;
+  --primary-200: #c7d2fe;
+  --primary-300: #a5b4fc;
+  --primary-400: #818cf8;
+  --primary-500: #6366f1;
+  --primary-600: #4f46e5; /* Core Primary */
+  --primary-700: #4338ca; /* Hover / Active */
+  --primary-800: #3730a3;
+  --primary-900: #312e81;
+
+  /* Secondary & Accents (Vibrant Sky & Soft Mint) */
+  --accent-cyan:     #0ea5e9;
+  --accent-cyan-subtle: #e0f2fe;
+  --accent-emerald:  #10b981;
+  --accent-emerald-subtle: #d1fae5;
+  --accent-amber:    #f59e0b;
+  --accent-rose:     #f43f5e;
+
+  /* Neutrals & Text (Slate Spectrum - eliminates harsh pure black) */
+  --slate-50:  #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+
+  /* Semantic UI Tokens (For consumption across all stylesheets) */
+  --color-primary:        var(--primary-600);
+  --color-primary-hover:  var(--primary-700);
+  --color-primary-subtle: var(--primary-50);
+  
+  --color-accent:         var(--accent-cyan);
+  --color-accent-subtle:  var(--accent-cyan-subtle);
+
+  --color-text-main:      var(--slate-900);
+  --color-text-body:      var(--slate-700);
+  --color-text-muted:     var(--slate-500);
+
+  --color-bg-base:        var(--slate-50);
+  --color-bg-surface:     #ffffff;
+  --color-bg-subtle:      var(--slate-100);
+
+  --color-border:         var(--slate-200);
+  --color-border-strong:  var(--slate-300);
+
+  /* Compatibility Aliases for components */
+  --primary-color:        var(--color-primary);
+  --primary-hover:        var(--color-primary-hover);
+  --secondary-color:      var(--slate-900);
+  --text-primary:         var(--color-text-main);
+  --text-secondary:       var(--color-text-body);
+  --bg-primary:           #ffffff;
+  --bg-secondary:         var(--slate-50);
+  --card-bg:              #ffffff;
+
+  /* ------------------------------------------------------------------------
+     3. Typography Tokens
+     ------------------------------------------------------------------------ */
+  --font-family-display: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-body:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family:         var(--font-family-body);
+
+  --font-size-xs:   0.75rem;    /* 12px */
+  --font-size-sm:   0.875rem;   /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg:   1.125rem;   /* 18px */
+  --font-size-xl:   1.25rem;    /* 20px */
+  --font-size-2xl:  1.5rem;     /* 24px */
+  --font-size-3xl:  1.875rem;   /* 30px */
+  --font-size-4xl:  2.25rem;    /* 36px */
+  --font-size-5xl:  3rem;       /* 48px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:    700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight:  1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  /* ------------------------------------------------------------------------
+     4. Elevation & Soft Shadows
+     Layered, diffused shadows designed not to look heavy or harsh.
+     ------------------------------------------------------------------------ */
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px -1px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
+  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.2);
+
+  /* ------------------------------------------------------------------------
+     5. Border Radii & Transitions
+     ------------------------------------------------------------------------ */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   6. Universal Reset & Base Styles
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-body);
+  background-color: var(--color-bg-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings utilize the distinct Plus Jakarta Sans for friendly punchiness */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+  color: var(--color-text-main);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+/* Soft text selection accent */
+::selection {
+  background-color: var(--primary-100);
+  color: var(--primary-900);
+}

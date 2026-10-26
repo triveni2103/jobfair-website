@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Fair 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ========================================================================
+       Visual Consistency, Partner Logos & Quality Polish Enhancements
+       ======================================================================== */
+    /* Co-Brand Partner Logos in Hero / Mission */
+    .mission-partner-logos {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 10px 18px;
+      margin-top: 14px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px -1px rgba(15, 23, 42, 0.05);
+      width: fit-content;
+    }
+
+    .hero-partner-logo {
+      height: 38px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .hero-partner-separator {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      font-weight: 300;
+      user-select: none;
+    }
+
+    /* About Us Organization Cards - Authentic Logos */
+    .org-logo-container {
+      width: 78px;
+      height: 56px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+      overflow: hidden;
+    }
+
+    .org-brand-logo {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .org-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* CV Builder Nav Highlight */
+    .nav-link.cv-nav-link {
+      color: #0d9488 !important;
+      font-weight: 700;
+    }
+
+    .nav-link.cv-nav-link:hover {
+      color: #0f766e !important;
+    }
+
+    /* Footer Partner Branding & Links */
+    .footer-brand-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-partner-logos {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 6px 14px;
+      border: 1px solid #e2e8f0;
+      width: fit-content;
+    }
+
+    .footer-logo-img {
+      height: 28px;
+      width: auto;
+      max-width: 100px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Focus & Accessibility Improvements */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid #0d9488;
+      outline-offset: 2px;
+    }
+
+    /* Mobile Responsive Polish */
+    @media (max-width: 768px) {
+      .mission-partner-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 8px 14px;
+        gap: 10px;
+        width: 100%;
+      }
+      .hero-partner-logo {
+        height: 30px;
+        max-width: 110px;
+      }
+      .footer-partner-logos {
+        margin: 0 auto;
+      }
+      .footer-brand-wrap {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ======================================================================
+       Header & Responsive Navigation
+       ====================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- 1. Left: Brand Logo -->
+      <a href="#home" class="logo">Job<span>Fair</span></a>
+
+      <!-- 2. Middle: Navigation Links (Desktop row / Mobile Drawer) -->
+      <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
+        <div class="nav-menu-header">
+          <span class="nav-drawer-logo">Job<span>Fair</span></span>
+          <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+        </div>
+
+        <div class="nav-links-wrapper">
+          <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
+          <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+          <a href="#previous-fairs" class="nav-link" data-i18n="nav_previous_fairs">Previous Job Fairs</a>
+          <a href="#impact" class="nav-link" data-i18n="nav_impact">Impact</a>
+          <a href="#bootcamps" class="nav-link" data-i18n="nav_bootcamps">Bootcamps</a>
+          <a href="#student-roadmap" class="nav-link" data-i18n="nav_roadmap">Student Roadmap</a>
+          <a href="#vaccancies" class="nav-link" data-i18n="nav_vaccancies">Vaccancies</a>
+          <a href="cv-builder.html" class="nav-link cv-nav-link" data-i18n="roadmap_btn_cv">CV Builder</a>
+          <a href="#contacts" class="nav-link" data-i18n="nav_contacts">Contacts</a>
+        </div>
+
+        <!-- Mobile Drawer CTA Button -->
+        <div class="nav-drawer-footer">
+          <a href="#register" class="btn btn-primary btn-block drawer-cta-btn" data-i18n="nav_register">Register Now</a>
+        </div>
+      </nav>
+
+      <!-- 3. Right: Permanent Nav Actions (Desktop CTA & Hamburger) -->
+      <div class="nav-actions">
+        <!-- Desktop Register Now CTA: Pinned inside window, never pushed out -->
+        <a href="#register" class="btn btn-primary nav-header-cta" data-i18n="nav_register">Register Now</a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+
+      <!-- Backdrop Overlay for Mobile Drawer -->
+      <div class="nav-backdrop" id="navBackdrop"></div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       1. Home: Mission & Collaboration Section (Tarunai & Lend A Hand India)
+       ====================================================================== -->
+  <section id="home" class="mission-section">
+    <div class="container mission-container">
+      
+      <!-- Content Column Header: Eyebrow, Title, Intro -->
+      <div class="mission-header-block">
+        <div class="mission-eyebrow-wrapper">
+          <span class="mission-eyebrow" data-i18n="mission_eyebrow">OUR MISSION</span>
+          <span class="mission-partner-tag" data-i18n="mission_partner">Tarunai &amp; Lend A Hand India Initiative</span>
+        </div>
+        <div class="mission-partner-logos" aria-label="Organizing Partner Logos">
+          <img src="assets/images/lahi-logo.png" alt="Lend A Hand India" class="hero-partner-logo lahi-hero-logo" width="130" height="38" loading="eager">
+          <span class="hero-partner-separator" aria-hidden="true">&times;</span>
+          <img src="assets/images/tarunai-logo.png" alt="TEAMTARUNAAI Foundation" class="hero-partner-logo tarunai-hero-logo" width="110" height="38" loading="eager">
+        </div>
+        <h1 class="mission-title" data-i18n="mission_title">Creating Pathways from Skills to Employment</h1>
+        <p class="mission-intro" data-i18n="mission_intro">Every young person deserves the opportunity to build a successful career.</p>
+      </div>
+
+      <!-- Visual Anchor Column: Hero Image with refined styling -->
+      <div class="mission-image-wrapper">
+        <div class="mission-image-card">
+          <img 
+            src="assets/images/hero.jpeg" 
+            alt="Youth participants engaging with employers at the Job Fair organized by Tarunai and Lend A Hand India" 
+            class="mission-hero-image"
+            width="1500" 
+            height="1125"
+            loading="eager"
+            fetchpriority="high"
+          >
+          <div class="mission-image-overlay">
+            <span class="overlay-badge" data-i18n="mission_badge">Skills • Opportunities • Employment</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Column Body: Descriptions, Focus Points, CTA -->
+      <div class="mission-body-block">
+        <div class="mission-narrative">
+          <p class="mission-p1" data-i18n="mission_desc_1">Through the collaborative efforts of Tarunai and Lend A Hand India, our Job Fair initiative aims to connect youth with employers, introduce them to career opportunities and support their journey towards employment.</p>
+          <p class="mission-p2" data-i18n="mission_desc_2">From mobilization and registration to interviews, selection and placement follow-up, we work towards making employment opportunities more accessible to young people.</p>
+        </div>
+
+        <!-- Our Focus Block -->
+        <div class="mission-focus-block">
+          <h2 class="focus-heading" data-i18n="mission_focus_heading">Our Focus</h2>
+          <div class="focus-grid">
+            <!-- Focus Item 1: Users / Handshake -->
+            <div class="focus-item">
+              <div class="focus-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="focus-text" data-i18n="mission_focus_1">Connecting youth with potential employers.</span>
+            </div>
+
+            <!-- Focus Item 2: Briefcase -->
+            <div class="focus-item">
+              <div class="focus-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <span class="focus-text" data-i18n="mission_focus_2">Creating access to employment opportunities.</span>
+            </div>
+
+            <!-- Focus Item 3: Graduation Cap -->
+            <div class="focus-item">
+              <div class="focus-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <span class="focus-text" data-i18n="mission_focus_3">Supporting career readiness and interview preparation.</span>
+            </div>
+
+            <!-- Focus Item 4: Target / Network -->
+            <div class="focus-item">
+              <div class="focus-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <span class="focus-text" data-i18n="mission_focus_4">Strengthening connections between skills and industry requirements.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Primary CTA -->
+        <div class="mission-cta-wrapper">
+          <a href="#about" class="btn mission-cta-btn">
+            <span data-i18n="mission_cta">Learn More About Us</span>
+            <svg class="cta-arrow-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       2. About Us Section: Lend A Hand India (LAHI) & TEAMTARUNAAI Foundation
+       ====================================================================== -->
+  <section id="about" class="about-section">
+    <div class="container about-container">
+      
+      <!-- Sub-section 1: Section Hero — About Our Initiative -->
+      <div class="about-hero-block">
+        <div class="about-hero-content">
+          <div class="about-eyebrow-wrapper">
+            <span class="about-eyebrow" data-i18n="about_eyebrow">ABOUT OUR INITIATIVE</span>
+          </div>
+          <h2 class="about-heading" data-i18n="about_heading">Creating Pathways from Skills to Employment</h2>
+          <p class="about-lead" data-i18n="about_lead">Bringing education, skills, young people, and employers together to create meaningful pathways towards employment.</p>
+        </div>
+
+        <!-- Subtle Visual Feature Badge / Metrics Mosaic -->
+        <div class="about-hero-visual" aria-hidden="true">
+          <div class="initiative-visual-card">
+            <div class="visual-pill-grid">
+              <div class="visual-pill">
+                <svg class="visual-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <span data-i18n="about_pill_education">Education</span>
+              </div>
+              <div class="visual-pill">
+                <svg class="visual-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+                <span data-i18n="about_pill_skills">Skills</span>
+              </div>
+              <div class="visual-pill">
+                <svg class="visual-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span data-i18n="about_pill_youth">Youth</span>
+              </div>
+              <div class="visual-pill">
+                <svg class="visual-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <span data-i18n="about_pill_careers">Careers</span>
+              </div>
+            </div>
+            <div class="visual-card-footer">
+              <span class="pulse-indicator"></span>
+              <span data-i18n="about_collab_badge">A Joint Impact Initiative</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-section 2: Two Organization Cards -->
+      <div class="about-orgs-grid">
+        <!-- Organization Card 1: Lend A Hand India (LAHI) -->
+        <div class="org-card org-card-lahi">
+          <div class="org-accent-line org-accent-teal"></div>
+          <div class="org-card-header">
+            <div class="org-logo-wrap">
+              <div class="org-logo-container">
+                <img src="assets/images/lahi-logo.png" alt="Lend A Hand India Logo" class="org-brand-logo lahi-card-logo" width="76" height="54" loading="lazy">
+              </div>
+              <div class="org-title-group">
+                <h3 class="org-title" data-i18n="lahi_name">Lend A Hand India</h3>
+                <span class="org-subtitle" data-i18n="lahi_abbr">(LAHI)</span>
+              </div>
+            </div>
+          </div>
+          <p class="org-desc" data-i18n="lahi_desc">Working for over 15 years to bridge the gap between education and skills, LAHI connects vocational education with employer requirements and employment opportunities.</p>
+          <div class="org-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon-box">
+                <!-- GraduationCap icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <span class="highlight-label" data-i18n="lahi_hl_1">Vocational Education</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon-box">
+                <!-- Wrench icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <span class="highlight-label" data-i18n="lahi_hl_2">Skills Development</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon-box">
+                <!-- BriefcaseBusiness icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <span class="highlight-label" data-i18n="lahi_hl_3">Employment Opportunities</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organization Card 2: TEAMTARUNAAI Foundation -->
+        <div class="org-card org-card-tarunaai">
+          <div class="org-accent-line org-accent-orange"></div>
+          <div class="org-card-header">
+            <div class="org-logo-wrap">
+              <div class="org-logo-container">
+                <img src="assets/images/tarunai-logo.png" alt="TEAMTARUNAAI Foundation Logo" class="org-brand-logo tarunai-card-logo" width="76" height="54" loading="lazy">
+              </div>
+              <div class="org-title-group">
+                <h3 class="org-title" data-i18n="tarunaai_name">TEAMTARUNAAI Foundation</h3>
+                <span class="org-subtitle" data-i18n="tarunaai_role">Implementing Partner</span>
+              </div>
+            </div>
+          </div>
+          <p class="org-desc" data-i18n="tarunaai_desc">An implementing partner in the Job Fair initiative, working with LAHI and other partners to connect young job seekers with employers.</p>
+          <div class="org-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon-box">
+                <!-- Users icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="highlight-label" data-i18n="tarunaai_hl_1">Youth Mobilization</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon-box">
+                <!-- Handshake icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a1 1 0 0 0 0-1.4l-2-2"></path>
+                  <path d="m18 10 1.3-1.3a1 1 0 0 0 0-1.4l-3.6-3.6a1 1 0 0 0-1.4 0L13 5"></path>
+                  <path d="M7 13 2.7 8.7a1 1 0 0 1 0-1.4l3.6-3.6a1 1 0 0 1 1.4 0L12 8"></path>
+                  <path d="m5 15 2 2a1 1 0 0 0 1.4 0l6.9-6.9"></path>
+                </svg>
+              </div>
+              <span class="highlight-label" data-i18n="tarunaai_hl_2">Employer Engagement</span>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon-box">
+                <!-- Target icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <span class="highlight-label" data-i18n="tarunaai_hl_3">Career Opportunities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-section 3: Collaboration Section — Working Together -->
+      <div class="about-collab-block">
+        <div class="collab-header text-center">
+          <h3 class="collab-heading" data-i18n="collab_heading">Together, We Create Opportunities</h3>
+          <p class="collab-desc" data-i18n="collab_desc">Through collaborative Job Fair initiatives, the organizations bring young people, employers, educational institutions, and other stakeholders together to facilitate recruitment and career exposure.</p>
+        </div>
+
+        <!-- Icon-Driven Connected Infographic Flow -->
+        <div class="collab-flow-container">
+          <div class="collab-flow-step">
+            <div class="flow-icon-circle">
+              <!-- graduation-cap icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span class="step-num">1</span>
+            </div>
+            <h4 class="flow-step-title" data-i18n="collab_step_1">Education &amp; Skills</h4>
+          </div>
+
+          <div class="collab-flow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+
+          <div class="collab-flow-step">
+            <div class="flow-icon-circle">
+              <!-- users icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span class="step-num">2</span>
+            </div>
+            <h4 class="flow-step-title" data-i18n="collab_step_2">Youth Mobilization</h4>
+          </div>
+
+          <div class="collab-flow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+
+          <div class="collab-flow-step">
+            <div class="flow-icon-circle">
+              <!-- handshake icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a1 1 0 0 0 0-1.4l-2-2"></path>
+                <path d="m18 10 1.3-1.3a1 1 0 0 0 0-1.4l-3.6-3.6a1 1 0 0 0-1.4 0L13 5"></path>
+                <path d="M7 13 2.7 8.7a1 1 0 0 1 0-1.4l3.6-3.6a1 1 0 0 1 1.4 0L12 8"></path>
+                <path d="m5 15 2 2a1 1 0 0 0 1.4 0l6.9-6.9"></path>
+              </svg>
+              <span class="step-num">3</span>
+            </div>
+            <h4 class="flow-step-title" data-i18n="collab_step_3">Employer Connection</h4>
+          </div>
+
+          <div class="collab-flow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+
+          <div class="collab-flow-step">
+            <div class="flow-icon-circle flow-icon-highlight">
+              <!-- briefcase-business icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span class="step-num">4</span>
+            </div>
+            <h4 class="flow-step-title" data-i18n="collab_step_4">Employment Pathways</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-section 4: Our Goal — A Strong Visual Closing Banner -->
+      <div class="about-goal-banner">
+        <div class="goal-banner-decor" aria-hidden="true"></div>
+        <div class="goal-banner-content">
+          <div class="goal-icon-badge">
+            <!-- Target / Upward arrow icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 16 12 8 8 12"></polyline>
+              <line x1="12" y1="8" x2="16" y2="12"></line>
+            </svg>
+          </div>
+          <span class="goal-eyebrow" data-i18n="goal_eyebrow">Our Goal</span>
+          <h3 class="goal-statement">
+            To connect <span class="highlight-teal" data-i18n="goal_word_skills">Skills</span> with <span class="highlight-teal" data-i18n="goal_word_opportunities">Opportunities</span> and help young people take meaningful steps towards their <span class="highlight-orange" data-i18n="goal_word_careers">Careers</span>.
+          </h3>
+          <div class="goal-cta-wrap">
+            <a href="#vaccancies" class="btn goal-cta-btn">
+              <span data-i18n="goal_cta">Explore Job Opportunities</span>
+              <svg class="goal-arrow-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       3. Previous Job Fairs Section (Homepage Curated Selection)
+       ====================================================================== -->
+  <section id="previous-fairs" class="section previous-fairs-section bg-alt">
+    <div class="container">
+      <div class="section-header-wrap text-center">
+        <span class="section-badge" data-i18n="pjf_badge">MILESTONES &amp; REACH</span>
+        <h2 class="section-title" data-i18n="sec_previous_title">Previous Job Fairs</h2>
+        <p class="section-subtitle" data-i18n="sec_previous_desc">Explore our journey of connecting young people with employers and creating pathways to employment.</p>
+      </div>
+
+      <!-- Curated Selection Grid (Rendered by job-fairs-data.js) -->
+      <div class="job-fairs-grid" id="homepageJobFairsGrid">
+        <!-- Rendered via JobFairsService -->
+      </div>
+
+      <!-- View All Action Button -->
+      <div class="section-cta-wrap text-center">
+        <a href="previous-job-fairs.html" class="btn btn-secondary view-all-fairs-btn">
+          <span data-i18n="btn_view_all_fairs">View All Job Fairs</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       4. Impact Section: Verified Reach & Recruitment Outcomes
+       ====================================================================== -->
+  <section id="impact" class="impact-section">
+    <div class="container impact-container">
+
+      <!-- 1. Impact Section Hero -->
+      <div class="impact-hero-block">
+        <div class="impact-hero-text">
+          <div class="impact-eyebrow-wrapper">
+            <span class="impact-eyebrow" data-i18n="impact_eyebrow">OUR IMPACT</span>
+            <span class="impact-meta-tag">Tarunai &amp; Lend A Hand India</span>
+          </div>
+          <h2 class="impact-heading" data-i18n="impact_heading">Creating Opportunities. Building Futures.</h2>
+          <div class="impact-intro">
+            <p class="impact-lead-p" data-i18n="impact_lead_1">Every Job Fair brings young people and employers together, opening pathways to employment and career development.</p>
+            <p class="impact-sub-p" data-i18n="impact_lead_2">Through collaboration, youth mobilization, employer engagement, and recruitment support, Tarunai and Lend A Hand India work to make employment opportunities more accessible.</p>
+          </div>
+        </div>
+        <div class="impact-hero-image-wrap">
+          <div class="impact-image-frame">
+            <img 
+              src="assets/images/hero.jpeg" 
+              alt="Youth interacting with recruiters at the Job Fair" 
+              class="impact-hero-img" 
+              loading="lazy"
+            >
+            <div class="impact-image-caption">
+              <span class="caption-dot"></span>
+              <span data-i18n="impact_caption_text">Verified Report Outcomes &amp; Community Reach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Key Impact Statistics — Mehkar Job Fair 2026 -->
+      <div class="impact-event-stats-block">
+        <div class="event-stats-header">
+          <div class="event-badge-pill">
+            <span class="event-name">Mehkar Job Fair 2026</span>
+            <span class="event-date-loc">20 August 2026 • Buldhana, Maharashtra</span>
+          </div>
+          <span class="verification-badge" title="Statistics from official executive summary and outcomes report">
+            <svg class="verify-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Verified Report Figures
+          </span>
+        </div>
+
+        <div class="stats-grid-mehkar">
+          <!-- Stat 1: 3,220 Registered Youth -->
+          <div class="stat-card">
+            <div class="stat-icon-wrap stat-icon-teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="stat-number">3,220</div>
+            <div class="stat-label" data-i18n="stat_mehkar_reg">Registered Youth / Job Seekers</div>
+          </div>
+
+          <!-- Stat 2: 40 Participating Employers (flagged *) -->
+          <div class="stat-card">
+            <div class="stat-icon-wrap stat-icon-navy">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div class="stat-number">40<span class="stat-flag" title="40 employers cited in Executive Summary &amp; outcomes table; 56 noted in day-of-event log">*</span></div>
+            <div class="stat-label" data-i18n="stat_mehkar_emp">Participating Employers</div>
+          </div>
+
+          <!-- Stat 3: 1,180 Candidates Reported as Selected -->
+          <div class="stat-card stat-card-highlight">
+            <div class="stat-icon-wrap stat-icon-teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number">1,180</div>
+            <div class="stat-label" data-i18n="stat_mehkar_selected">Candidates Reported as Selected</div>
+          </div>
+
+          <!-- Stat 4: 420 Appointment Letters Reported -->
+          <div class="stat-card stat-card-highlight">
+            <div class="stat-icon-wrap stat-icon-orange">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <polyline points="9 15 11 17 15 13"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number">420</div>
+            <div class="stat-label" data-i18n="stat_mehkar_letters">Appointment Letters Reported</div>
+          </div>
+
+          <!-- Stat 5: 760 Candidates Shortlisted for 2nd Round -->
+          <div class="stat-card">
+            <div class="stat-icon-wrap stat-icon-teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                <polyline points="9 14 11 16 15 12"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number">760</div>
+            <div class="stat-label" data-i18n="stat_mehkar_shortlist">Shortlisted for Second Round</div>
+          </div>
+
+          <!-- Stat 6: 4 Pathway Partners -->
+          <div class="stat-card">
+            <div class="stat-icon-wrap stat-icon-navy">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a1 1 0 0 0 0-1.4l-2-2"></path>
+                <path d="m18 10 1.3-1.3a1 1 0 0 0 0-1.4l-3.6-3.6a1 1 0 0 0-1.4 0L13 5"></path>
+                <path d="M7 13 2.7 8.7a1 1 0 0 1 0-1.4l3.6-3.6a1 1 0 0 1 1.4 0L12 8"></path>
+                <path d="m5 15 2 2a1 1 0 0 0 1.4 0l6.9-6.9"></path>
+              </svg>
+            </div>
+            <div class="stat-number">4</div>
+            <div class="stat-label" data-i18n="stat_mehkar_partners">Pathway Partners</div>
+          </div>
+
+          <!-- Stat 7: 70 Volunteers Reported (flagged **) -->
+          <div class="stat-card">
+            <div class="stat-icon-wrap stat-icon-orange">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <div class="stat-number">70<span class="stat-flag" title="70 volunteers cited in Executive Summary &amp; outcomes table; 50 in staffing section">**</span></div>
+            <div class="stat-label" data-i18n="stat_mehkar_volunteers">Volunteers in Executive Summary</div>
+          </div>
+        </div>
+
+        <!-- Verification Footnotes -->
+        <div class="stats-verification-note">
+          <p><em>* 40 participating employers cited in Executive Summary and final outcomes table (56 noted in day-of-event mobilization log).</em></p>
+          <p><em>** 70 volunteers cited in Executive Summary and outcomes table (50 noted in staffing breakdown). Figures presented per official summary.</em></p>
+        </div>
+      </div>
+
+      <!-- 3. Previous Job Fair Impact — Chhatrapati Sambhajinagar (16 Dec 2023) -->
+      <div class="impact-csn-card">
+        <div class="csn-header">
+          <div class="csn-title-group">
+            <span class="csn-event-tag">Chhatrapati Sambhajinagar | December 2023</span>
+            <h3 class="csn-title">Vocational Candidates Recruitment Drive</h3>
+            <p class="csn-partners-text">Organized by Lend A Hand India in association with Samagra Shiksha Maharashtra</p>
+          </div>
+          <div class="csn-badge-status">Specialized Vocational Drive</div>
+        </div>
+
+        <div class="csn-metrics-grid">
+          <div class="csn-metric-box">
+            <span class="csn-metric-val">303</span>
+            <span class="csn-metric-label" data-i18n="stat_csn_reached">Students Reached Through Mobilization</span>
+          </div>
+          <div class="csn-metric-box">
+            <span class="csn-metric-val">120</span>
+            <span class="csn-metric-label" data-i18n="stat_csn_reg">Candidates Registered Online</span>
+          </div>
+          <div class="csn-metric-box">
+            <span class="csn-metric-val">86</span>
+            <span class="csn-metric-label" data-i18n="stat_csn_attended">Candidates Attended on Event Day</span>
+          </div>
+          <div class="csn-metric-box csn-highlight-box">
+            <span class="csn-metric-val">40</span>
+            <span class="csn-metric-label" data-i18n="stat_csn_offers">Reported Receiving Job Offer Letters</span>
+          </div>
+          <div class="csn-metric-box">
+            <span class="csn-metric-val">16</span>
+            <span class="csn-metric-label" data-i18n="stat_csn_second">Selected for Second Interview Round</span>
+          </div>
+        </div>
+        <p class="csn-pipeline-note">Note: Mobilized reach, online registrations, actual attendees, and selections are distinct, non-additive stages in the recruitment pipeline.</p>
+      </div>
+
+      <!-- 4. Impact Across Job Fairs: Our Journey of Creating Opportunities -->
+      <div class="impact-journey-events-block">
+        <div class="text-center section-header-wrap">
+          <span class="section-badge">COMPARATIVE OUTCOMES</span>
+          <h3 class="section-title" data-i18n="impact_journey_title">Our Journey of Creating Opportunities</h3>
+          <p class="section-subtitle" data-i18n="impact_journey_desc">Documented milestones and recruitment outcomes from regional Job Fair initiatives.</p>
+        </div>
+
+        <div class="journey-cards-grid">
+          <!-- Event 1 Card -->
+          <div class="journey-event-card">
+            <div class="journey-card-top">
+              <span class="journey-date-badge">August 2026</span>
+              <span class="journey-status-pill">Flagship Expo</span>
+            </div>
+            <h4 class="journey-card-title">Mehkar Job Fair 2026</h4>
+            <p class="journey-card-loc">Krushi Vaibhav Lawns, Mehkar, Buldhana, Maharashtra</p>
+            <div class="journey-card-stats">
+              <div class="journey-stat-item">
+                <span class="j-stat-num">3,220</span>
+                <span class="j-stat-lbl">Registered Candidates</span>
+              </div>
+              <div class="journey-stat-item">
+                <span class="j-stat-num">40</span>
+                <span class="j-stat-lbl">Participating Employers</span>
+              </div>
+              <div class="journey-stat-item">
+                <span class="j-stat-num text-teal">1,180</span>
+                <span class="j-stat-lbl">Reported Selections</span>
+              </div>
+              <div class="journey-stat-item">
+                <span class="j-stat-num text-orange">420</span>
+                <span class="j-stat-lbl">Appointment Letters</span>
+              </div>
+            </div>
+            <a href="previous-job-fairs.html" class="journey-card-link">View Event Details &rarr;</a>
+          </div>
+
+          <!-- Event 2 Card -->
+          <div class="journey-event-card">
+            <div class="journey-card-top">
+              <span class="journey-date-badge">December 2023</span>
+              <span class="journey-status-pill">Vocational Drive</span>
+            </div>
+            <h4 class="journey-card-title">Chhatrapati Sambhajinagar Job Fair 2023</h4>
+            <p class="journey-card-loc">Chhatrapati Sambhajinagar, Maharashtra</p>
+            <div class="journey-card-stats">
+              <div class="journey-stat-item">
+                <span class="j-stat-num">303</span>
+                <span class="j-stat-lbl">Students Reached</span>
+              </div>
+              <div class="journey-stat-item">
+                <span class="j-stat-num">13</span>
+                <span class="j-stat-lbl">Participating Employers</span>
+              </div>
+              <div class="journey-stat-item">
+                <span class="j-stat-num text-teal">86</span>
+                <span class="j-stat-lbl">Candidates Attended</span>
+              </div>
+              <div class="journey-stat-item">
+                <span class="j-stat-num text-orange">40</span>
+                <span class="j-stat-lbl">Offer Letters Reported</span>
+              </div>
+            </div>
+            <a href="previous-job-fairs.html" class="journey-card-link">View Event Details &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Visual Storytelling: Beyond the Numbers -->
+      <div class="impact-storytelling-block">
+        <div class="storytelling-header text-center">
+          <span class="section-badge">ON THE GROUND</span>
+          <h3 class="section-title" data-i18n="beyond_title">Beyond the Numbers</h3>
+          <p class="section-subtitle" data-i18n="beyond_desc">Behind every statistic is a young person taking steps toward a career and an employer finding motivated talent.</p>
+        </div>
+
+        <div class="storytelling-grid">
+          <div class="story-item">
+            <div class="story-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h4 class="story-title">Youth Mobilization &amp; Registration</h4>
+            <p class="story-desc">Dedicated field mobilization reaching rural, semi-urban, and vocational school students to raise awareness about legitimate employment pathways.</p>
+          </div>
+
+          <div class="story-item">
+            <div class="story-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h4 class="story-title">CV Preparation &amp; Readiness</h4>
+            <p class="story-desc">Orientation sessions helping job seekers structure resumes, highlight vocational competencies, and approach interview panels with confidence.</p>
+          </div>
+
+          <div class="story-item">
+            <div class="story-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a1 1 0 0 0 0-1.4l-2-2"></path><path d="m18 10 1.3-1.3a1 1 0 0 0 0-1.4l-3.6-3.6a1 1 0 0 0-1.4 0L13 5"></path><path d="M7 13 2.7 8.7a1 1 0 0 1 0-1.4l3.6-3.6a1 1 0 0 1 1.4 0L12 8"></path><path d="m5 15 2 2a1 1 0 0 0 1.4 0l6.9-6.9"></path></svg>
+            </div>
+            <h4 class="story-title">Employer Interviews &amp; Selection</h4>
+            <p class="story-desc">Direct on-the-spot interviews facilitating transparent selection and multi-sector matching between candidate skills and company vacancies.</p>
+          </div>
+
+          <div class="story-item">
+            <div class="story-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h4 class="story-title">Pathway Counseling &amp; Follow-up</h4>
+            <p class="story-desc">Continuous post-fair tracking, second-round coordination, and counseling to facilitate smooth transition from selection to employment joining.</p>
+          </div>
+        </div>
+
+        <div class="text-center story-cta-wrap">
+          <a href="previous-job-fairs.html" class="btn btn-secondary">
+            <span>Explore Previous Job Fairs</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 6. Our Impact Journey: 5-Step Process Timeline -->
+      <div class="impact-process-timeline-block">
+        <div class="text-center section-header-wrap">
+          <span class="section-badge">SYSTEMIC PATHWAY</span>
+          <h3 class="section-title">Our Impact Journey</h3>
+          <p class="section-subtitle">How our collaborative model guides youth from outreach to employment follow-up.</p>
+        </div>
+
+        <div class="process-steps-row">
+          <div class="process-step-item">
+            <div class="process-step-badge">1</div>
+            <h4 class="process-step-name" data-i18n="step_1_title">1. Mobilize</h4>
+            <p class="process-step-p" data-i18n="step_1_desc">Mobilize young people and share employment opportunities.</p>
+          </div>
+
+          <div class="process-divider-arrow" aria-hidden="true">&rarr;</div>
+
+          <div class="process-step-item">
+            <div class="process-step-badge">2</div>
+            <h4 class="process-step-name" data-i18n="step_2_title">2. Prepare</h4>
+            <p class="process-step-p" data-i18n="step_2_desc">Support registration and CV readiness.</p>
+          </div>
+
+          <div class="process-divider-arrow" aria-hidden="true">&rarr;</div>
+
+          <div class="process-step-item">
+            <div class="process-step-badge">3</div>
+            <h4 class="process-step-name" data-i18n="step_3_title">3. Connect</h4>
+            <p class="process-step-p" data-i18n="step_3_desc">Connect candidates with employers.</p>
+          </div>
+
+          <div class="process-divider-arrow" aria-hidden="true">&rarr;</div>
+
+          <div class="process-step-item">
+            <div class="process-step-badge">4</div>
+            <h4 class="process-step-name" data-i18n="step_4_title">4. Recruit</h4>
+            <p class="process-step-p" data-i18n="step_4_desc">Facilitate interviews and recruitment opportunities.</p>
+          </div>
+
+          <div class="process-divider-arrow" aria-hidden="true">&rarr;</div>
+
+          <div class="process-step-item">
+            <div class="process-step-badge">5</div>
+            <h4 class="process-step-name" data-i18n="step_5_title">5. Follow Up</h4>
+            <p class="process-step-p" data-i18n="step_5_desc">Track selections, appointment letters, and joining outcomes where available.</p>
+          </div>
+        </div>
+
+        <p class="process-disclaimer text-center">
+          <em>* Disclaimer: The process flow illustrates the programmatic support lifecycle and does not imply that every registered candidate completes every stage or obtains employment.</em>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       5. Bootcamps Section: Beyond the Job Fair: Preparing Youth for Success
+       ====================================================================== -->
+  <section id="bootcamps" class="section bootcamp-section bg-alt">
+    <div class="container">
+
+      <!-- 1. Section Header & Hero -->
+      <div class="bootcamp-hero-block">
+        <div class="bootcamp-hero-content text-center">
+          <div class="bootcamp-eyebrow-wrapper">
+            <span class="section-badge bootcamp-eyebrow-badge" data-i18n="bootcamp_eyebrow">PREPARING YOUTH FOR OPPORTUNITIES</span>
+            <span class="bootcamp-partner-tag">Tarunai &amp; Lend A Hand India</span>
+          </div>
+          <h2 class="section-title bootcamp-title" data-i18n="bootcamp_title">Beyond the Job Fair: Preparing Youth for Success</h2>
+          <div class="bootcamp-lead-wrapper">
+            <p class="section-subtitle bootcamp-lead-text" data-i18n="bootcamp_desc_1">
+              A successful employment journey begins before the interview. Through bootcamps, career-readiness sessions, and student engagement activities, young people are supported in preparing their CVs, understanding their skills, and building confidence to interact with employers.
+            </p>
+            <p class="bootcamp-sublead-text" data-i18n="bootcamp_desc_2">
+              Tarunai and Lend A Hand India work with students, educational institutions, and other stakeholders to help candidates prepare for recruitment opportunities.
+            </p>
+          </div>
+
+          <!-- Section CTA Button linking to /bootcamps -->
+          <div class="bootcamp-cta-wrap">
+            <a href="bootcamps.html" class="btn btn-primary bootcamp-explore-cta">
+              <span data-i18n="btn_explore_bootcamps">Explore Our Bootcamps</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Verified Metrics Strip (Chhatrapati Sambhajinagar Job Fair 2023 Report) -->
+      <div class="bootcamp-metrics-strip" aria-label="Reported Bootcamp Metrics">
+        <div class="bootcamp-metrics-header">
+          <div class="bootcamp-metrics-badge-wrap">
+            <span class="bootcamp-event-tag" data-i18n="bootcamp_badge_official">Chhatrapati Sambhajinagar Job Fair | 2023</span>
+          </div>
+          <span class="bootcamp-metrics-subtitle" data-i18n="bootcamp_metrics_caption">Verified Preparation &amp; Candidate Readiness Outcomes</span>
+        </div>
+
+        <div class="bootcamp-stats-grid">
+          <!-- Stat 1: 6 Bootcamps -->
+          <div class="bootcamp-stat-card">
+            <div class="bootcamp-stat-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="bootcamp-stat-num">6</div>
+            <div class="bootcamp-stat-label" data-i18n="bootcamp_stat_conducted">Bootcamps Conducted</div>
+          </div>
+
+          <!-- Stat 2: 185 Students Attended -->
+          <div class="bootcamp-stat-card">
+            <div class="bootcamp-stat-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="bootcamp-stat-num">185</div>
+            <div class="bootcamp-stat-label" data-i18n="bootcamp_stat_attended">Students Attended</div>
+          </div>
+
+          <!-- Stat 3: 126 Interested & Eligible -->
+          <div class="bootcamp-stat-card">
+            <div class="bootcamp-stat-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="bootcamp-stat-num">126</div>
+            <div class="bootcamp-stat-label" data-i18n="bootcamp_stat_eligible">Reported Interested &amp; Eligible</div>
+          </div>
+
+          <!-- Stat 4: 52 Mock Interviews -->
+          <div class="bootcamp-stat-card">
+            <div class="bootcamp-stat-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                <line x1="8" y1="9" x2="16" y2="9"></line>
+                <line x1="8" y1="13" x2="14" y2="13"></line>
+              </svg>
+            </div>
+            <div class="bootcamp-stat-num">52</div>
+            <div class="bootcamp-stat-label" data-i18n="bootcamp_stat_mocks">Mock Interviews Conducted</div>
+          </div>
+        </div>
+
+        <p class="bootcamp-metrics-note text-center" data-i18n="bootcamp_metrics_disclaimer">
+          * Verified figures from the Chhatrapati Sambhajinagar Job Fair 2023 official report. Figures represent this specific event's preparatory phase, not organization-wide totals.
+        </p>
+      </div>
+
+      <!-- 3. Bootcamp Activity Cards Grid (Rendered via bootcamps-data.js) -->
+      <div class="bootcamp-grid-wrapper">
+        <div class="bootcamp-cards-grid" id="homepageBootcampsGrid">
+          <!-- Dynamically populated by initHomepageBootcamps() in bootcamps-data.js -->
+        </div>
+      </div>
+
+      <!-- 4. Bootcamp Journey Process Timeline -->
+      <div class="bootcamp-journey-section">
+        <div class="section-header-wrap text-center">
+          <span class="section-badge" data-i18n="bootcamp_journey_eyebrow">THE PREPARATION PROCESS</span>
+          <h3 class="bootcamp-journey-heading" data-i18n="bootcamp_journey_title">Bootcamp Journey: From Classroom to Interview</h3>
+        </div>
+
+        <div class="bootcamp-journey-timeline" role="list">
+          <!-- Step 1: Discover -->
+          <div class="journey-timeline-step" role="listitem">
+            <div class="journey-step-badge">01</div>
+            <div class="journey-step-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <h4 class="journey-step-title" data-i18n="bootcamp_journey_step1_title">01. Discover</h4>
+            <p class="journey-step-text" data-i18n="bootcamp_journey_step1_desc">Learn about employment opportunities, eligibility requirements, and available job roles.</p>
+          </div>
+
+          <div class="journey-connector" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+
+          <!-- Step 2: Prepare -->
+          <div class="journey-timeline-step" role="listitem">
+            <div class="journey-step-badge">02</div>
+            <div class="journey-step-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h4 class="journey-step-title" data-i18n="bootcamp_journey_step2_title">02. Prepare</h4>
+            <p class="journey-step-text" data-i18n="bootcamp_journey_step2_desc">Identify relevant skills, prepare a CV, and understand the registration process.</p>
+          </div>
+
+          <div class="journey-connector" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+
+          <!-- Step 3: Practise -->
+          <div class="journey-timeline-step" role="listitem">
+            <div class="journey-step-badge">03</div>
+            <div class="journey-step-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h4 class="journey-step-title" data-i18n="bootcamp_journey_step3_title">03. Practise</h4>
+            <p class="journey-step-text" data-i18n="bootcamp_journey_step3_desc">Develop interview readiness through guidance, common interview questions, and mock interviews.</p>
+          </div>
+
+          <div class="journey-connector" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+
+          <!-- Step 4: Connect -->
+          <div class="journey-timeline-step" role="listitem">
+            <div class="journey-step-badge">04</div>
+            <div class="journey-step-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h4 class="journey-step-title" data-i18n="bootcamp_journey_step4_title">04. Connect</h4>
+            <p class="journey-step-text" data-i18n="bootcamp_journey_step4_desc">Participate in the Job Fair and interact with employers to explore suitable opportunities.</p>
+          </div>
+        </div>
+
+        <p class="journey-disclaimer-note text-center" data-i18n="bootcamp_journey_disclaimer">
+          * This is an explanatory journey illustrating the preparatory pathway, not a claim that every student completes all four stages.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. Student Roadmap: Your Journey from Eligibility to Employment
+       ====================================================================== -->
+  <section id="student-roadmap" class="section student-roadmap-section" role="region" aria-label="Student Career Roadmap">
+    <div class="container roadmap-container">
+
+      <!-- 1. Section Header -->
+      <div class="roadmap-header-wrap text-center">
+        <span class="section-badge roadmap-eyebrow-badge" data-i18n="roadmap_eyebrow">YOUR CAREER JOURNEY</span>
+        <h2 class="section-title roadmap-main-heading">
+          <span data-i18n="roadmap_heading_prefix">Your Journey from</span>
+          <span class="roadmap-hl-teal" data-i18n="roadmap_word_eligibility">Eligibility</span>
+          <span data-i18n="roadmap_word_to">to</span>
+          <span class="roadmap-hl-orange" data-i18n="roadmap_word_employment">Employment</span>
+        </h2>
+        <p class="section-subtitle roadmap-subtitle" data-i18n="roadmap_subtitle">Five steps towards your career.</p>
+        
+        <!-- Short decorative underline using teal and orange -->
+        <div class="roadmap-dual-underline" aria-hidden="true">
+          <span class="underline-bar underline-teal"></span>
+          <span class="underline-bar underline-orange"></span>
+        </div>
+      </div>
+
+      <!-- 2. Winding Road Interactive Journey Canvas (Desktop & Tablet) -->
+      <div class="roadmap-canvas-area" aria-label="Career Journey Interactive Roadmap">
+        
+        <!-- Background Soft Landscape -->
+        <div class="roadmap-landscape-bg" aria-hidden="true">
+          <div class="landscape-clouds">
+            <span class="cloud cloud-1"></span>
+            <span class="cloud cloud-2"></span>
+            <span class="cloud cloud-3"></span>
+          </div>
+          <div class="landscape-hills">
+            <div class="hill hill-back"></div>
+            <div class="hill hill-front"></div>
+          </div>
+        </div>
+
+        <!-- Vignettes Row (Above Road Milestones) -->
+        <div class="roadmap-vignettes-row" aria-hidden="true">
+          <!-- Vignette 1: Eligibility Check -->
+          <div class="roadmap-vignette-item vignette-step-1" data-step="1">
+            <div class="vignette-bubble">
+              <div class="vignette-clip-card">
+                <span class="clip-card-header">Am I Eligible?</span>
+                <ul class="clip-card-checklist">
+                  <li><span class="clip-check">&check;</span> Education</li>
+                  <li><span class="clip-check">&check;</span> Age</li>
+                  <li><span class="clip-check">&check;</span> Skills</li>
+                  <li><span class="clip-check">&check;</span> Job Requirements</li>
+                </ul>
+              </div>
+              <div class="vignette-avatar-wrap">
+                <svg viewBox="0 0 40 40" class="vignette-avatar-svg" fill="none">
+                  <circle cx="20" cy="14" r="8" fill="#cbd5e1" stroke="#0f172a" stroke-width="2"/>
+                  <path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" fill="#0284c7" stroke="#0f172a" stroke-width="2"/>
+                  <rect x="24" y="22" width="10" height="12" rx="2" fill="#f8fafc" stroke="#0f172a" stroke-width="1.5"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vignette 2: Registration -->
+          <div class="roadmap-vignette-item vignette-step-2" data-step="2">
+            <div class="vignette-bubble">
+              <div class="vignette-clip-card">
+                <span class="clip-card-header">Job Fair Registration</span>
+                <div class="vignette-mini-form">
+                  <span class="form-mini-line"></span>
+                  <span class="form-mini-line"></span>
+                  <span class="form-mini-btn">&check; Submit</span>
+                </div>
+              </div>
+              <div class="vignette-avatar-wrap">
+                <svg viewBox="0 0 40 40" class="vignette-avatar-svg" fill="none">
+                  <circle cx="20" cy="14" r="8" fill="#cbd5e1" stroke="#0f172a" stroke-width="2"/>
+                  <path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" fill="#0d9488" stroke="#0f172a" stroke-width="2"/>
+                  <rect x="12" y="26" width="16" height="10" rx="1" fill="#334155"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vignette 3: Job Fair Day -->
+          <div class="roadmap-vignette-item vignette-step-3" data-step="3">
+            <div class="vignette-bubble">
+              <div class="vignette-canopy-booth">
+                <div class="canopy-roof">
+                  <span class="canopy-title">JOB FAIR</span>
+                </div>
+                <div class="canopy-interview-scene">
+                  <span class="desk-person candidate-dot" title="Candidate"></span>
+                  <span class="desk-table"></span>
+                  <span class="desk-person recruiter-dot" title="Recruiter"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vignette 4: Selection Communication -->
+          <div class="roadmap-vignette-item vignette-step-4" data-step="4">
+            <div class="vignette-bubble">
+              <div class="vignette-clip-card selection-card">
+                <span class="clip-card-header">Selection Update</span>
+                <div class="selection-envelope">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  <span class="envelope-badge">1</span>
+                </div>
+              </div>
+              <div class="vignette-avatar-wrap">
+                <svg viewBox="0 0 40 40" class="vignette-avatar-svg" fill="none">
+                  <circle cx="20" cy="14" r="8" fill="#cbd5e1" stroke="#0f172a" stroke-width="2"/>
+                  <path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" fill="#6366f1" stroke="#0f172a" stroke-width="2"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vignette 5: Next Move & Outcomes -->
+          <div class="roadmap-vignette-item vignette-step-5" data-step="5">
+            <div class="vignette-outcomes-fork">
+              <div class="outcome-sign sign-accept">
+                <span class="sign-arrow-icon">&rarr;</span>
+                <span class="sign-text">Accept</span>
+              </div>
+              <div class="outcome-sign sign-reject">
+                <span class="sign-arrow-icon">&rarr;</span>
+                <span class="sign-text">Reject / Explore</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Winding Road SVG Illustration -->
+        <div class="roadmap-svg-wrap">
+          <svg viewBox="0 0 1200 240" class="roadmap-road-svg" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="roadGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2563eb" />
+                <stop offset="25%" stop-color="#0d9488" />
+                <stop offset="50%" stop-color="#f97316" />
+                <stop offset="75%" stop-color="#6366f1" />
+                <stop offset="100%" stop-color="#10b981" />
+              </linearGradient>
+              <filter id="roadShadow" x="-5%" y="-10%" width="110%" height="130%">
+                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.15" />
+              </filter>
+            </defs>
+
+            <!-- Main Road Base Surface (Navy Blue Slate) -->
+            <path 
+              d="M -20,120 C 60,120 100,135 150,135 C 230,135 290,105 380,105 C 470,105 530,150 620,150 C 720,150 780,110 860,110 C 930,110 970,120 1010,120" 
+              fill="none" 
+              stroke="#0f172a" 
+              stroke-width="44" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+              filter="url(#roadShadow)"
+            />
+            <path 
+              d="M -20,120 C 60,120 100,135 150,135 C 230,135 290,105 380,105 C 470,105 530,150 620,150 C 720,150 780,110 860,110 C 930,110 970,120 1010,120" 
+              fill="none" 
+              stroke="#1e293b" 
+              stroke-width="38" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+            />
+
+            <!-- Branch A Base (Fork Up to Accept) -->
+            <path 
+              d="M 1010,120 C 1050,120 1080,75 1180,60" 
+              fill="none" 
+              stroke="#0f172a" 
+              stroke-width="42" 
+              stroke-linecap="round"
+            />
+            <path 
+              d="M 1010,120 C 1050,120 1080,75 1180,60" 
+              fill="none" 
+              stroke="#1e293b" 
+              stroke-width="36" 
+              stroke-linecap="round"
+            />
+
+            <!-- Branch B Base (Fork Down to Reject / Explore) -->
+            <path 
+              d="M 1010,120 C 1050,120 1080,165 1180,180" 
+              fill="none" 
+              stroke="#0f172a" 
+              stroke-width="42" 
+              stroke-linecap="round"
+            />
+            <path 
+              d="M 1010,120 C 1050,120 1080,165 1180,180" 
+              fill="none" 
+              stroke="#1e293b" 
+              stroke-width="36" 
+              stroke-linecap="round"
+            />
+
+            <!-- White Dashed Lane Centerlines (Animated Drawing Path) -->
+            <path 
+              class="animated-road-path road-centerline"
+              d="M -20,120 C 60,120 100,135 150,135 C 230,135 290,105 380,105 C 470,105 530,150 620,150 C 720,150 780,110 860,110 C 930,110 970,120 1010,120" 
+              fill="none" 
+              stroke="#ffffff" 
+              stroke-width="3" 
+              stroke-dasharray="14 10" 
+              stroke-linecap="round"
+            />
+            <path 
+              class="animated-road-path road-centerline branch-a-line"
+              d="M 1010,120 C 1050,120 1080,75 1180,60" 
+              fill="none" 
+              stroke="#10b981" 
+              stroke-width="3" 
+              stroke-dasharray="10 8" 
+              stroke-linecap="round"
+            />
+            <path 
+              class="animated-road-path road-centerline branch-b-line"
+              d="M 1010,120 C 1050,120 1080,165 1180,180" 
+              fill="none" 
+              stroke="#f97316" 
+              stroke-width="3" 
+              stroke-dasharray="10 8" 
+              stroke-linecap="round"
+            />
+          </svg>
+
+          <!-- Interactive Milestone Markers Overlay -->
+          <nav class="roadmap-milestones-nav" aria-label="Roadmap milestone steps" role="tablist">
+            
+            <!-- Milestone 1 -->
+            <button 
+              type="button" 
+              class="roadmap-milestone-marker marker-step-1" 
+              data-step="1" 
+              role="tab" 
+              aria-selected="true" 
+              aria-controls="roadmap-card-1"
+              id="roadmap-marker-1"
+              title="Step 1: Check Your Eligibility"
+            >
+              <span class="milestone-pin-ring"></span>
+              <span class="milestone-pin-body">1</span>
+            </button>
+
+            <!-- Milestone 2 -->
+            <button 
+              type="button" 
+              class="roadmap-milestone-marker marker-step-2" 
+              data-step="2" 
+              role="tab" 
+              aria-selected="false" 
+              aria-controls="roadmap-card-2"
+              id="roadmap-marker-2"
+              title="Step 2: Register for the Job Fair"
+            >
+              <span class="milestone-pin-ring"></span>
+              <span class="milestone-pin-body">2</span>
+            </button>
+
+            <!-- Milestone 3 -->
+            <button 
+              type="button" 
+              class="roadmap-milestone-marker marker-step-3" 
+              data-step="3" 
+              role="tab" 
+              aria-selected="false" 
+              aria-controls="roadmap-card-3"
+              id="roadmap-marker-3"
+              title="Step 3: Attend the Job Fair"
+            >
+              <span class="milestone-pin-ring"></span>
+              <span class="milestone-pin-body">3</span>
+            </button>
+
+            <!-- Milestone 4 -->
+            <button 
+              type="button" 
+              class="roadmap-milestone-marker marker-step-4" 
+              data-step="4" 
+              role="tab" 
+              aria-selected="false" 
+              aria-controls="roadmap-card-4"
+              id="roadmap-marker-4"
+              title="Step 4: Wait for Selection & Joining Communication"
+            >
+              <span class="milestone-pin-ring"></span>
+              <span class="milestone-pin-body">4</span>
+            </button>
+
+            <!-- Milestone 5 -->
+            <button 
+              type="button" 
+              class="roadmap-milestone-marker marker-step-5" 
+              data-step="5" 
+              role="tab" 
+              aria-selected="false" 
+              aria-controls="roadmap-card-5"
+              id="roadmap-marker-5"
+              title="Step 5: Make Your Next Move"
+            >
+              <span class="milestone-pin-ring"></span>
+              <span class="milestone-pin-body">5</span>
+            </button>
+          </nav>
+        </div>
+
+      </div>
+
+      <!-- 3. The Five Step Cards Grid (Rendered Below Road) -->
+      <div class="roadmap-cards-grid" role="tabpanel" id="roadmap-cards-container">
+        
+        <!-- Step 1 Card: Check Your Eligibility -->
+        <article class="roadmap-step-card card-step-1 is-active" data-step="1" id="roadmap-card-1" tabindex="0">
+          <div class="step-card-header">
+            <span class="step-number-tag tag-blue" data-i18n="roadmap_step1_badge">#1 • Eligibility</span>
+            <h3 class="step-card-title" data-i18n="roadmap_step1_title">Check Your Eligibility</h3>
+          </div>
+          <p class="step-card-desc" data-i18n="roadmap_step1_desc">See if you meet the education, age, skills, and job-specific requirements.</p>
+          
+          <div class="step-checklist-wrap">
+            <ul class="step-checklist">
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                <span data-i18n="roadmap_step1_item1">Educational qualification</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span data-i18n="roadmap_step1_item2">Age criteria</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+                <span data-i18n="roadmap_step1_item3">Relevant skills</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                  <polyline points="9 14 12 17 16 11"/>
+                </svg>
+                <span data-i18n="roadmap_step1_item4">Job-specific requirements</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Step 2 Card: Register for the Job Fair -->
+        <article class="roadmap-step-card card-step-2" data-step="2" id="roadmap-card-2" tabindex="0">
+          <div class="step-card-header">
+            <span class="step-number-tag tag-teal" data-i18n="roadmap_step2_badge">#2 • Registration</span>
+            <h3 class="step-card-title" data-i18n="roadmap_step2_title">Register for the Job Fair</h3>
+          </div>
+          <p class="step-card-desc" data-i18n="roadmap_step2_desc">Fill in your details, select suitable opportunities, and submit your registration.</p>
+          
+          <div class="step-checklist-wrap">
+            <ul class="step-checklist">
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                <span data-i18n="roadmap_step2_item1">Keep your documents ready</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                </svg>
+                <span data-i18n="roadmap_step2_item2">Prepare your CV</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                  <line x1="9" y1="12" x2="15" y2="12"/>
+                  <line x1="9" y1="16" x2="13" y2="16"/>
+                </svg>
+                <span data-i18n="roadmap_step2_item3">Fill in the registration form</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span data-i18n="roadmap_step2_item4">Submit and confirm registration</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Step 3 Card: Attend the Job Fair -->
+        <article class="roadmap-step-card card-step-3" data-step="3" id="roadmap-card-3" tabindex="0">
+          <div class="step-card-header">
+            <span class="step-number-tag tag-orange" data-i18n="roadmap_step3_badge">#3 • Interview Day</span>
+            <h3 class="step-card-title" data-i18n="roadmap_step3_title">Attend the Job Fair</h3>
+          </div>
+          <p class="step-card-desc" data-i18n="roadmap_step3_desc">Meet employers, explore job opportunities, share your CV, and attend interviews.</p>
+          
+          <div class="step-checklist-wrap">
+            <ul class="step-checklist">
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <span data-i18n="roadmap_step3_item1">Interact with companies</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+                <span data-i18n="roadmap_step3_item2">Share your CV</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  <line x1="8" y1="9" x2="16" y2="9"/>
+                </svg>
+                <span data-i18n="roadmap_step3_item3">Attend interviews</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                <span data-i18n="roadmap_step3_item4">Showcase your skills</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Step 4 Card: Wait for Selection & Joining Communication -->
+        <article class="roadmap-step-card card-step-4" data-step="4" id="roadmap-card-4" tabindex="0">
+          <div class="step-card-header">
+            <span class="step-number-tag tag-purple" data-i18n="roadmap_step4_badge">#4 • Selection Update</span>
+            <h3 class="step-card-title" data-i18n="roadmap_step4_title">Wait for Selection &amp; Joining Communication</h3>
+          </div>
+          <p class="step-card-desc" data-i18n="roadmap_step4_desc">Employers review candidates and share selection decisions and offer or joining details.</p>
+          
+          <div class="step-checklist-wrap">
+            <ul class="step-checklist">
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span data-i18n="roadmap_step4_item1">Receive updates from employers</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span data-i18n="roadmap_step4_item2">Selection timelines may vary</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="check-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span data-i18n="roadmap_step4_item3">Keep your contact details active</span>
+              </li>
+            </ul>
+          </div>
+          <p class="step-card-footnote" data-i18n="roadmap_step4_note">
+            * Selection timelines and outcomes depend on individual employers.
+          </p>
+        </article>
+
+        <!-- Step 5 Card: Make Your Next Move (Dual Outcome Cards) -->
+        <article class="roadmap-step-card card-step-5 card-dual-outcome" data-step="5" id="roadmap-card-5" tabindex="0">
+          <div class="step-card-header">
+            <span class="step-number-tag tag-cyan" data-i18n="roadmap_step5_badge">#5 • Decision &amp; Next Move</span>
+            <h3 class="step-card-title" data-i18n="roadmap_step5_title">Make Your Next Move</h3>
+          </div>
+          <p class="step-card-desc" data-i18n="roadmap_step5_desc">Decide what to do next based on your interview outcomes and career goals.</p>
+
+          <!-- Branching Outcome Cards -->
+          <div class="dual-outcomes-wrapper">
+            <!-- Path A: Accept -->
+            <div class="outcome-box outcome-box-accept roadmap-outcome-branch">
+              <div class="outcome-box-header">
+                <span class="outcome-badge-pill pill-accept" data-i18n="roadmap_path_a_badge">Path A • Confirm</span>
+                <h4 class="outcome-box-title" data-i18n="roadmap_path_a_title">Accept the Offer</h4>
+              </div>
+              <p class="outcome-box-desc" data-i18n="roadmap_path_a_desc">Review the offer details, confirm acceptance, and complete the joining formalities.</p>
+              <div class="outcome-box-meta">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Joining Letter &amp; Onboarding</span>
+              </div>
+            </div>
+
+            <!-- Path B: Decline -->
+            <div class="outcome-box outcome-box-decline roadmap-outcome-branch">
+              <div class="outcome-box-header">
+                <span class="outcome-badge-pill pill-decline" data-i18n="roadmap_path_b_badge">Path B • Explore</span>
+                <h4 class="outcome-box-title" data-i18n="roadmap_path_b_title">Decline the Offer</h4>
+              </div>
+              <p class="outcome-box-desc" data-i18n="roadmap_path_b_desc">Politely decline the offer and explore other suitable job opportunities.</p>
+              <div class="outcome-box-meta">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                </svg>
+                <span>Upskill &amp; Alternate Openings</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="step-card-footnote" data-i18n="roadmap_step5_note">
+            * Accepting or declining an offer is the candidate's personal decision. Participation does not guarantee an offer.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- 4. Closing Journey Banner -->
+      <div class="roadmap-closing-banner">
+        <div class="banner-content-inner">
+          <div class="banner-hiker-graphic" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="hiker-svg" fill="none">
+              <!-- Mountain Peak with Flag -->
+              <polygon points="12,56 36,20 60,56" fill="#bfdbfe" opacity="0.6"/>
+              <polygon points="26,56 42,28 58,56" fill="#93c5fd" opacity="0.8"/>
+              <line x1="36" y1="20" x2="36" y2="8" stroke="#0f172a" stroke-width="2"/>
+              <polygon points="36,8 48,13 36,18" fill="#f97316"/>
+              <!-- Hiker Silhouette -->
+              <circle cx="28" cy="38" r="3" fill="#0f172a"/>
+              <path d="M26 42l4 7l-3 7" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+              <path d="M29 42l2 6l3 8" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+              <rect x="22" y="41" width="5" height="7" rx="1.5" fill="#f97316"/>
+              <!-- Paper Plane -->
+              <path d="M48 34l12-6l-5 10l-3-3z" fill="#0ea5e9"/>
+            </svg>
+          </div>
+
+          <div class="banner-text-content">
+            <h3 class="banner-title" data-i18n="roadmap_banner_title">Your Journey Starts with One Step.</h3>
+            <p class="banner-subtitle" data-i18n="roadmap_banner_subtitle">Prepare, participate, and move towards your career.</p>
+          </div>
+
+          <div class="banner-actions">
+            <a href="#previous-fairs" class="btn btn-secondary banner-btn-fairs" data-i18n="roadmap_btn_fairs">Explore Job Fairs</a>
+            <a href="cv-builder.html" class="btn btn-primary banner-btn-cv" data-i18n="roadmap_btn_cv">Build Your CV</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       7. Vacancies at a Glance Section
+       ====================================================================== -->
+  <section id="vaccancies" class="section vacancies-section bg-alt" role="region" aria-label="Vacancies at a Glance">
+    <div class="container vacancies-container">
+      
+      <!-- Section Header -->
+      <div class="section-header-wrap text-center vacancies-header-wrap">
+        <span class="section-badge vacancies-badge" data-i18n="vacancies_eyebrow">EXPLORE CAREER OPPORTUNITIES</span>
+        <h2 class="section-title vacancies-title" data-i18n="vacancies_heading">Vacancies at a Glance</h2>
+        <p class="section-subtitle vacancies-subtitle" data-i18n="vacancies_subtitle">
+          Explore participating companies and discover career opportunities that match your skills and aspirations.
+        </p>
+        <div class="vacancies-header-divider" aria-hidden="true"></div>
+      </div>
+
+      <!-- Summary Statistics Row (Populated by vacancies-data.js) -->
+      <div class="vacancies-stats-row" id="vacanciesStatsRow" aria-label="Vacancies Summary Statistics">
+        <!-- Injected via vacancies-data.js -->
+      </div>
+
+      <!-- Preview / Mode Notice Banner (Populated by vacancies-data.js) -->
+      <div class="vacancies-preview-banner" id="vacanciesPreviewBanner" role="status">
+        <!-- Injected via vacancies-data.js -->
+      </div>
+
+      <!-- Dynamic Company Vacancy Cards Grid (Populated by vacancies-data.js) -->
+      <div class="vacancies-cards-grid" id="vacanciesCardsGrid" aria-label="Participating Companies and Job Vacancies">
+        <!-- Injected via vacancies-data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       8. Contacts Section: We're Here to Help
+       ====================================================================== -->
+  <section id="contacts" class="section contact-section" role="region" aria-label="Contact Us">
+    <div class="container contact-container">
+
+      <!-- Section Header -->
+      <div class="section-header-wrap text-center contact-header-wrap">
+        <span class="section-badge contact-badge" data-i18n="contact_eyebrow">GET IN TOUCH</span>
+        <h2 class="section-title contact-title" data-i18n="contact_heading">We’re Here to Help</h2>
+        <p class="section-subtitle contact-subtitle" data-i18n="contact_subtitle">
+          Have questions about our job fairs or career opportunities? Get in touch with our team.
+        </p>
+      </div>
+
+      <!-- Contact Cards Layout -->
+      <div class="contact-cards-layout">
+        
+        <!-- Row 1: Two Small Cards (Phone & Email) -->
+        <div class="contact-cards-row">
+          
+          <!-- Small Card 1: Phone -->
+          <article class="contact-card contact-card-small">
+            <div class="contact-card-icon-wrap icon-phone-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-card-body">
+              <h3 class="contact-card-label" data-i18n="contact_phone_label">PHONE</h3>
+              <div class="contact-detail-group">
+                <a href="tel:+912025630090" class="contact-value-link">+91 20 2563 0090</a>
+                <a href="tel:+912025630092" class="contact-value-link">+91 20 2563 0092</a>
+              </div>
+              <span class="contact-helper-text" data-i18n="contact_phone_hours">Mon – Fri, 9:30 AM – 6:00 PM IST</span>
+            </div>
+          </article>
+
+          <!-- Small Card 2: Email -->
+          <article class="contact-card contact-card-small">
+            <div class="contact-card-icon-wrap icon-mail-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contact-card-body">
+              <h3 class="contact-card-label" data-i18n="contact_email_label">EMAIL US</h3>
+              <div class="contact-detail-group">
+                <a href="mailto:lahi@lendahandindia.org" class="contact-value-link contact-email-link">lahi@lendahandindia.org</a>
+              </div>
+              <span class="contact-helper-text" data-i18n="contact_email_sub">Drop us an email anytime</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Row 2: Wider Card (Head Office Address + Verified Office Map) -->
+        <article class="contact-card contact-card-wide">
+          <div class="contact-wide-content">
+            <div class="contact-card-icon-wrap icon-location-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-wide-body">
+              <h3 class="contact-card-label" data-i18n="contact_office_label">HEAD OFFICE</h3>
+              <p class="contact-address-text" data-i18n="contact_office_address">
+                Prahlad Arcade, Bhakti Marg, Off Law College Road, Erandwane, Pune, Maharashtra 411004, India.
+              </p>
+              <div class="contact-directions-wrap">
+                <a 
+                  href="https://maps.google.com/?q=Prahlad+Arcade,+Bhakti+Marg,+Off+Law+College+Road,+Erandwane,+Pune,+Maharashtra+411004" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="contact-directions-btn"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                    <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+                  </svg>
+                  <span data-i18n="contact_directions_link">Open in Google Maps</span>
+                  <span class="external-arrow" aria-hidden="true">&nearr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Verified Location Map -->
+          <div class="contact-map-frame">
+            <iframe 
+              title="Lend A Hand India Head Office Location Map"
+              src="https://maps.google.com/maps?q=Prahlad+Arcade,+Bhakti+Marg,+Off+Law+College+Road,+Erandwane,+Pune,+Maharashtra+411004&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              class="contact-map-iframe"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Professional Closing Line -->
+      <div class="contact-closing-wrap text-center">
+        <div class="contact-closing-divider" aria-hidden="true"></div>
+        <p class="contact-closing-line" data-i18n="contact_closing_line">
+          Building opportunities. Shaping futures.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       9. Registration Now Section (KoboToolbox Portals)
+       ====================================================================== -->
+  <section id="register" class="section register-section bg-alt" role="region" aria-label="Registration Now">
+    <div class="container register-container">
+      
+      <!-- Section Header -->
+      <div class="section-header-wrap text-center register-header-wrap">
+        <span class="section-badge register-badge" data-i18n="reg_eyebrow">REGISTRATION &amp; PARTICIPATION</span>
+        <h2 class="section-title register-title" data-i18n="reg_heading">Registration Now</h2>
+        <p class="section-subtitle register-subtitle" data-i18n="reg_subtitle">
+          Choose an option below to register for the upcoming Job Fair or check your interview selection status.
+        </p>
+        <div class="register-header-divider" aria-hidden="true"></div>
+      </div>
+
+      <!-- Two Options Cards Grid -->
+      <div class="register-options-grid">
+        
+        <!-- Option 1: Student Registration Form -->
+        <article class="register-option-card card-student-reg">
+          <div class="reg-card-top">
+            <div class="reg-card-meta">
+              <span class="reg-audience-badge badge-teal" data-i18n="reg_card1_badge">New Participants</span>
+              <div class="reg-card-icon-wrap icon-teal" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="11" cy="7" r="4"></circle>
+                  <line x1="19" y1="8" x2="19" y2="14"></line>
+                  <line x1="22" y1="11" x2="16" y2="11"></line>
+                </svg>
+              </div>
+            </div>
+            <h3 class="reg-card-title" data-i18n="reg_card1_title">Register for the Job Fair</h3>
+            <p class="reg-card-desc" data-i18n="reg_card1_desc">
+              Are you interested in participating in the Job Fair? Fill out the Student Registration Form to register your details.
+            </p>
+            <ul class="reg-feature-list">
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span data-i18n="reg_card1_point1">Open for vocational graduates, ITI candidates &amp; youth</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span data-i18n="reg_card1_point2">Direct interview scheduling with participating employers</span>
+              </li>
+            </ul>
+          </div>
+          <div class="reg-card-bottom">
+            <a href="https://ee-eu.kobotoolbox.org/x/782QtnGz" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block reg-cta-btn">
+              <span data-i18n="reg_card1_btn">Register Now</span>
+              <svg class="ext-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Option 2: Interview Status Form -->
+        <article class="register-option-card card-interview-status">
+          <div class="reg-card-top">
+            <div class="reg-card-meta">
+              <span class="reg-audience-badge badge-orange" data-i18n="reg_card2_badge">Existing Participants</span>
+              <div class="reg-card-icon-wrap icon-orange" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <polyline points="11 8 11 11 14 11"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="reg-card-title" data-i18n="reg_card2_title">Check Your Interview Status</h3>
+            <p class="reg-card-desc" data-i18n="reg_card2_desc">
+              Have you already participated in the Job Fair and want to check your interview status? Fill out the Interview Status Form and submit your details to check your status.
+            </p>
+            <ul class="reg-feature-list">
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span data-i18n="reg_card2_point1">Track shortlist outcomes and selection updates</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span data-i18n="reg_card2_point2">Follow up on offer letter and joining formalities</span>
+              </li>
+            </ul>
+          </div>
+          <div class="reg-card-bottom">
+            <a href="https://ee-eu.kobotoolbox.org/x/R1fQdRv7" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-block reg-cta-btn">
+              <span data-i18n="reg_card2_btn">Check Interview Status</span>
+              <svg class="ext-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand-wrap">
+        <div class="footer-partner-logos" aria-label="Organizing Partner Logos">
+          <img src="assets/images/lahi-logo.png" alt="Lend A Hand India" class="footer-logo-img" width="95" height="28" loading="lazy">
+          <img src="assets/images/tarunai-logo.png" alt="TEAMTARUNAAI Foundation" class="footer-logo-img" width="80" height="28" loading="lazy">
+        </div>
+        <p data-i18n="footer_rights">&copy; 2026 Job Fair. Supported by Tarunai &amp; Lend A Hand India.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#previous-fairs" data-i18n="nav_previous_fairs">Previous Job Fairs</a>
+        <a href="#impact" data-i18n="nav_impact">Impact</a>
+        <a href="#bootcamps" data-i18n="nav_bootcamps">Bootcamps</a>
+        <a href="#student-roadmap" data-i18n="nav_roadmap">Student Roadmap</a>
+        <a href="#vaccancies" data-i18n="nav_vaccancies">Vaccancies</a>
+        <a href="cv-builder.html" data-i18n="roadmap_btn_cv">CV Builder</a>
+        <a href="#contacts" data-i18n="nav_contacts">Contacts</a>
+        <a href="#register" data-i18n="nav_register">Register Now</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="lang.js" defer></script>
+  <script src="job-fairs-data.js" defer></script>
+  <script src="bootcamps-data.js" defer></script>
+  <script src="roadmap.js" defer></script>
+  <script src="vacancies-data.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
